@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body { margin: 0; display: flex; height: 100vh; font-family: system-ui, sans-serif; color: #222; }
+aside { width: 240px; border-right: 1px solid #ccc; background: #f4f4f7; display: flex; flex-direction: column; overflow: auto; }
+main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.bar { display: flex; gap: 6px; padding: 6px; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; }
+#topbar { justify-content: flex-start; }
+#title { flex: 1; font-size: 18px; font-weight: bold; border: none; outline: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+li { padding: 6px 10px; cursor: pointer; }
+li.active { background: #d8d8f0; }
+#search { margin: 4px 6px; }
+button.tab.active { background: #6a5acd; color: #fff; }
+.hidden { display: none !important; }
+.view { flex: 1; min-height: 0; display: flex; }
+#editor { flex: 1; border: none; border-right: 1px solid #ddd; padding: 12px; font: 14px monospace; resize: none; outline: none; }
+#preview { flex: 1; padding: 12px 20px; overflow: auto; }
+#preview pre { background: #eee; padding: 8px; overflow: auto; }
+#preview code { background: #eee; }
+#preview blockquote { border-left: 3px solid #aaa; margin: 0; padding-left: 10px; color: #555; }
+#preview a { color: #2a5db0; }
+#preview a.wikilink { color: #7a3db0; }
+#canvas { flex: 1; position: relative; overflow: auto; background: radial-gradient(#ccc 1px, transparent 1px) 0 0 / 20px 20px; }
+.card { position: absolute; width: 200px; min-height: 80px; background: #fff8b8; border: 1px solid #c9b94a; box-shadow: 1px 2px 4px #0003; display: flex; flex-direction: column; }
+.card .handle { background: #ecd96a; cursor: move; height: 16px; display: flex; justify-content: flex-end; font-size: 12px; }
+.card .handle span { cursor: pointer; padding: 0 5px; }
+.card textarea { flex: 1; border: none; background: transparent; resize: both; min-height: 60px; outline: none; font: 13px sans-serif; }
+svg { flex: 1; width: 100%; height: 100%; background: #fafaff; }
+svg .node circle, svg .node rect { fill: #fff; stroke: #6a5acd; stroke-width: 2; }
+svg .node.ghost circle { stroke-dasharray: 4; stroke: #999; }
+svg .node.sel circle { fill: #e0dcff; }
+svg text { font-size: 13px; text-anchor: middle; pointer-events: none; user-select: none; }
+svg line { stroke: #888; stroke-width: 1.5; }
