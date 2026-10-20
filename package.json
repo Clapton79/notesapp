@@ -1,0 +1,14 @@
+{
+  "name": "notesapp",
+  "version": "0.1.0",
+  "description": "Desktop notes app with sections, markdown, a free canvas and association maps",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}
